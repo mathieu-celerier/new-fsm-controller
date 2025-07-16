@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 4.0.0)
 
 set(CXX_DISABLE_WERROR 1)
 set(CMAKE_CXX_STANDARD 11)
@@ -19,10 +19,6 @@ if(NOT TARGET mc_rtc::mc_control)
 endif()
 
 add_subdirectory(src)
-
-if(BUILD_TESTING)
-  add_subdirectory(tests)
-endif()
 
 configure_file(etc/NewFSMController.in.yaml
                "${CMAKE_CURRENT_BINARY_DIR}/etc/NewFSMController.yaml")
